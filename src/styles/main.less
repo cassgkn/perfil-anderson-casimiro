@@ -1,0 +1,176 @@
+@import "mapas.less";
+
+@breakpointMobile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
+
+
+
+
+.marginBottom8 {
+    margin-bottom: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #colors[background-color];
+    color: #colors[textColor];
+
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    @media @breakpointMobile {
+        max-width: 92%;
+
+        header {
+            margin-bottom: 4px;
+            .profile-avatar {
+                width: 170px;
+                width: 170px;
+            }
+        }
+
+        .profile-bio {
+            &-name {
+                font-size: 20px;
+                .marginBottom8();
+            }
+
+            &-subtitle {
+                font-size: 16px;
+            }
+
+            &-description {
+                font-size: 14px;
+                text-align: justify;
+                margin-top: 15px;
+            }
+        }
+
+        .projects-list {
+            font-size: 17px;
+        }
+
+        .projects-list{
+            &-item {
+                a {
+                    text-decoration: none;
+                    background-color: #colors[buttomColor];
+                    display: block;
+                    padding: 10px 14px;
+                    margin-bottom: 14px;
+                    border-radius: 30px;
+                    text-align: center;
+                    color: #colors[textColor];
+                    font-weight: bold;
+                    font-size: 16px;
+                    border: 2px solid #colors[buttomColor];
+                    transition: all ease .5s;
+
+                    &:hover {
+                        color: #colors[buttomColor];
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+
+        .social-links {
+            margin-top: 10px;
+        }
+    }
+    @media @breakpointTablet {
+        max-width: 80%;
+        }
+    
+}
+
+header {
+    padding-bottom: 24px;
+
+    .profile-avatar {
+        display: block;
+        margin: 0 auto 24px;
+        border-radius: 50%;
+        width: 250px;
+        width: 250px;
+    }
+}
+
+.profile-bio {
+    text-align: center;
+
+    &-name {
+        font-size: 25px;
+        .marginBottom8();
+    }
+
+    &-subtitle {
+        font-size: 20px;
+        .marginBottom8();
+    }
+
+    &-description {
+        font-size: 16px;
+        text-align: justify;
+        opacity: .7;
+    }
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-between;
+    max-width: 240px;
+    width: 100%;
+    margin: 0 auto;
+
+    li {
+        img {
+            transition: all ease .3s;
+            &:hover {
+                transform: scale(1.3);
+            }
+        }
+    }
+}
+
+.projects-list{
+    &-item {
+        a {
+            text-decoration: none;
+            background-color: #colors[buttomColor];
+            display: block;
+            padding: 16px 20px;
+            margin-bottom: 20px;
+            border-radius: 30px;
+            text-align: center;
+            color: #colors[textColor];
+            font-weight: bold;
+            font-size: 22px;
+            border: 2px solid #colors[buttomColor];
+            transition: all ease .5s;
+
+            &:hover {
+                color: #colors[buttomColor];
+                background-color: transparent;
+            }
+        }
+    }
+}
